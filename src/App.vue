@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <SidebarLeft/>
+    <Dashboard/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SidebarLeft from '@/components/SidebarLeft'
+import Dashboard from '@/view/Dashboard'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  components: { SidebarLeft, Dashboard },
+
+  name: 'App'
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import '~@coreui/icons/css/coreui-icons.min.css';
+  $fa-font-path: '~font-awesome/fonts/';
+  @import '~font-awesome/scss/font-awesome.scss';
+  $simple-line-font-path: '~simple-line-icons/fonts/';
+  @import '~simple-line-icons/scss/simple-line-icons.scss';
+  @import '~flag-icon-css/css/flag-icon.min.css';
+  @import '~bootstrap-vue/dist/bootstrap-vue.css';
+  @import "~@coreui/coreui/scss/coreui";
+
+  .app {
+    display: unset;
+  }
 </style>
