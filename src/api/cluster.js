@@ -1,8 +1,8 @@
 import http from '@/services/http'
 
 export default {
-  getNodes () {
-    return http.get('/api/v1/nodes')
+  async getNodes () {
+    return await http.get('/api/v1/nodes')
   },
 
   getNamespaces () {

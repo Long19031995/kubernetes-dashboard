@@ -1,12 +1,13 @@
 export default {
-  baseUrl: 'https://api.k8s.goquo.com',
+  baseUrl: 'https://pikalongstudio.com',
 
   async request (method, url, data) {
     const apiUrl = this.baseUrl + url
     const option = {
-      method: method,
+      method,
+      mode: 'cors',
       headers: {
-        authorization: 'Basic ' + btoa('admin:NxsFb1I3k4aEbm0zIbmp6n87MO2MdvuR')
+        'Content-Type': 'application/json'
       }
     }
     const reponse = await fetch(apiUrl, option)
