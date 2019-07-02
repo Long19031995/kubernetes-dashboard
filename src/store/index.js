@@ -1,6 +1,13 @@
-import cluster from './cluster'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import state from './state'
+import mutations from './mutations'
+import actions from './actions'
 
-export default {
-  currentComponent: 'Namespaces',
-  cluster
-}
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  state,
+  mutations,
+  actions
+})

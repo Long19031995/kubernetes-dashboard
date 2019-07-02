@@ -1,19 +1,27 @@
 <template>
   <div class="namespaces">
-    namespaces
+    <b-table hover bordered dark :items="items"/>
   </div>
 </template>
 
 <script>
-import store from '@/store'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'Namespaces',
 
   data () {
     return {
-      cluster: store.cluster
+      items: [
+        { Name: '', Labels: '', Status: null, Age: 0 }
+      ]
     }
+  },
+
+  computed: {
+    ...mapState({
+      namespaces: state => state.cluster.namespaces
+    })
   },
 
   mounted () {
@@ -21,8 +29,20 @@ export default {
   },
 
   methods: {
-    init () {
-      this.cluster.fetchNodes()
+    ...mapActions({
+      getNamespaces: 'getNamespaces'
+    }),
+
+    async init () {
+      await this.getNamespaces()
+
+      this.createTableData()
+    },
+
+    createTableData () {
+      if (this.namespaces) {
+
+      }
     }
   }
 }

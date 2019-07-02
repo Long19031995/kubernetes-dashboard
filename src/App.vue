@@ -1,32 +1,31 @@
 <template>
   <div class="app">
     <SidebarLeft/>
-    <Dashboard/>
+    <router-view/>
   </div>
 </template>
 
 <script>
 import SidebarLeft from '@/components/SidebarLeft'
-import Dashboard from '@/view/Dashboard'
 
 export default {
-  components: { SidebarLeft, Dashboard },
+  components: { SidebarLeft },
 
   name: 'App'
 }
 </script>
 
 <style lang="scss">
-  @import '~@coreui/icons/css/coreui-icons.min.css';
-  $fa-font-path: '~font-awesome/fonts/';
-  @import '~font-awesome/scss/font-awesome.scss';
-  $simple-line-font-path: '~simple-line-icons/fonts/';
-  @import '~simple-line-icons/scss/simple-line-icons.scss';
-  @import '~flag-icon-css/css/flag-icon.min.css';
-  @import '~bootstrap-vue/dist/bootstrap-vue.css';
-  @import "~@coreui/coreui/scss/coreui";
+@import '~@coreui/icons/css/coreui-icons.min.css';
+$fa-font-path: '~font-awesome/fonts/';
+@import '~font-awesome/scss/font-awesome.scss';
+$simple-line-font-path: '~simple-line-icons/fonts/';
+@import '~simple-line-icons/scss/simple-line-icons.scss';
+@import '~flag-icon-css/css/flag-icon.min.css';
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+@import "~@coreui/coreui/scss/coreui";
 
-  .app {
-    display: unset;
-  }
+.app {
+  display: unset;
+}
 </style>

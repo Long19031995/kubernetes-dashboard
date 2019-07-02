@@ -5,7 +5,6 @@ export default {
     const apiUrl = this.baseUrl + url
     const option = {
       method,
-      mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       }

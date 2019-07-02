@@ -1,5 +1,5 @@
-import cluster from './cluster'
+import clusterApi from './cluster'
 
 export default {
-  cluster
+  clusterApi
 }
