@@ -1,6 +1,6 @@
 <template>
-  <div class="nodes">
-    
+  <div class="roles">
+
   </div>
 </template>
 
@@ -8,11 +8,11 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
-  name: 'Nodes',
+  name: 'Roles',
 
   computed: {
     ...mapState({
-      nodes: state => state.cluster.nodes
+      roles: state => state.cluster.roles
     })
   },
 
@@ -22,13 +22,12 @@ export default {
 
   methods: {
     ...mapActions({
-      getNodes: 'getNodes'
+      getRoles: 'getRoles'
     }),
 
-    async init() {
-      await this.getNodes()
+    async init () {
+      await this.getRoles()
     }
   }
 }
 </script>
-

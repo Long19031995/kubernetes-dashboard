@@ -2,12 +2,12 @@
   <div class="sidebar-left">
     <div v-if="menu" class="list-item">
       <div v-for="(item, index) in menu" class="item" :key="index">
-        <router-link :to="item.routerName" class="name">
+        <router-link :to="{ name: item.routerName }" class="name">
           {{ item.name }}
         </router-link>
         <div v-if="item.listChild" class="list-child">
           <div v-for="(child, index) in item.listChild" class="child" :key="index">
-            <router-link :to="child.routerName" class="name">
+            <router-link :to="{ name: child.routerName }" class="name">
               {{ child.name}}
             </router-link>
           </div>

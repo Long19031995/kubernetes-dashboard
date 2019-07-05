@@ -22,12 +22,17 @@ export default new VueRouter({
             {
               path: 'namespaces',
               name: 'namespaces',
-              component: () => import('@/view/Cluster/Namespaces')
+              component: () => import('@/view/Cluster/Namespaces/Index')
             },
             {
-              path: 'nodes',
-              name: 'nodes',
-              component: () => import('@/view/Cluster/Nodes')
+              path: 'namespaces/:name',
+              name: 'namespaces-detail',
+              component: () => import('@/view/Cluster/Namespaces/Detail')
+            },
+            {
+              path: 'roles',
+              name: 'roles',
+              component: () => import('@/view/Cluster/Roles')
             },
             {
               path: 'persistent-volumes',
@@ -38,6 +43,19 @@ export default new VueRouter({
               path: 'storage-classes',
               name: 'storage-classes',
               component: () => import('@/view/Cluster/StorageClasses')
+            }
+          ]
+        },
+        {
+          path: 'workload',
+          name: 'workloads',
+          redirect: { name: 'pods' },
+          component: () => import('@/view/Workloads/Index'),
+          children: [
+            {
+              path: 'pods',
+              name: 'pods',
+              component: () => import('@/view/Workloads/Pods')
             }
           ]
         }

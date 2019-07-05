@@ -1,6 +1,6 @@
 <template>
-  <div class="nodes">
-    
+  <div class="pods">
+    pods
   </div>
 </template>
 
@@ -8,11 +8,11 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
-  name: 'Nodes',
+  name: 'Pods',
 
   computed: {
     ...mapState({
-      nodes: state => state.cluster.nodes
+      pods: state => state.workloads.pods
     })
   },
 
@@ -22,13 +22,12 @@ export default {
 
   methods: {
     ...mapActions({
-      getNodes: 'getNodes'
+      getPods: 'getPods'
     }),
 
-    async init() {
-      await this.getNodes()
+    async init () {
+      await this.getPods()
     }
   }
 }
 </script>
-

@@ -8,8 +8,8 @@ export default [
         routerName: 'namespaces'
       },
       {
-        name: 'Nodes',
-        routerName: 'nodes'
+        name: 'Roles',
+        routerName: 'roles'
       },
       {
         name: 'Persistent Volumes',
@@ -18,6 +18,16 @@ export default [
       {
         name: 'Storage Classes',
         routerName: 'storage-classes'
+      }
+    ]
+  },
+  {
+    name: 'Workloads',
+    routerName: 'workloads',
+    listChild: [
+      {
+        name: 'pods',
+        routerName: 'pods'
       }
     ]
   }

@@ -2,5 +2,6 @@ export default {
   namespaces: {},
   nodes: {},
   persistentVolumes: {},
-  storageClasses: {}
+  storageClasses: {},
+  roles: {}
 }
