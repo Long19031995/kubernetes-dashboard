@@ -41,7 +41,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "growl": "^1.10.5",
-    "https-proxy-agent": "^2.2.1",
+    "https-proxy-agent": "^2.2.3",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
